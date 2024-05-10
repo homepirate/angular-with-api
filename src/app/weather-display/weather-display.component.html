@@ -1,0 +1,15 @@
+<div *ngIf="weatherData">
+    <h2>Погода в {{ weatherData.location.name }}</h2>
+    <div>Дата: <strong>{{ formatDate(weatherData.location.localtime).date }}</strong></div>
+    <div>Время: <strong>{{ formatDate(weatherData.location.localtime).time }}</strong></div>
+    <div>Температура: {{ weatherData.current.temp_c }}°C</div>
+    <div>Состояние: {{ weatherData.current.condition.text }}</div>
+    <img [src]="'https:' + weatherData.current.condition.icon" alt="Weather icon">
+    <div> Ветер: {{ weatherData.current.wind_kph }} км/ч, направление ветра {{ weatherData.current.wind_dir }}</div>
+    <div>Влажность: {{ weatherData.current.humidity }}%</div>
+    <div>Давление: {{ (weatherData.current.pressure_mb * 0.750062).toFixed(2) }} мм рт.ст.</div>
+  </div>
+  <div *ngIf="!weatherData">
+    <p>Loading weather data...</p>
+  </div>
+  

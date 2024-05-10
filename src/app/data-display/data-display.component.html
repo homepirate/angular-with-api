@@ -1,0 +1,5 @@
+<div>
+    <input type="text" [(ngModel)]="city" placeholder="Введите город">
+    <button (click)="updateCity(city)">Узнать погоду</button>
+</div>
+<app-weather-display [weatherData]="data"></app-weather-display>
