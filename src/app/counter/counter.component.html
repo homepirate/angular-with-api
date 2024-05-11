@@ -1,0 +1,14 @@
+
+  <button (click)="resetNotes()">Сбросить заметки</button>
+  <form (submit)="addNote()" [formGroup]="newNote">
+    <input type="text" placeholder="Заголовок" formControlName="title">
+    <textarea placeholder="Запись" formControlName="content"></textarea>
+    <button type="submit">Добавить</button>
+  </form>
+  <div *ngIf="(notes$ | async) as notes" class="notes-container">
+    <div *ngFor="let note of notes" class="note">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.content }}</p>
+      <button (click)="deleteNote(note.title)">Удалить</button>
+    </div>
+  </div>

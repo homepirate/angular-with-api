@@ -1,0 +1,47 @@
+.note {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    // width: 30%;
+  }
+  
+  .note-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  input, textarea {
+    // width: 30%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .reset-button {
+    margin-top: 20px;
+  }
+  
