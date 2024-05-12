@@ -1,5 +1,5 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnInit, inject } from '@angular/core';
 import { WeatherDisplayComponent } from '../weather-display/weather-display.component';
 import { FormsModule } from '@angular/forms';
 import { Subscription, debounceTime, interval, startWith, switchMap } from 'rxjs';
@@ -42,8 +42,5 @@ export class DataDisplayComponent implements OnInit{
     this.fetchData();
 
   }
-
   
-
-
 }
