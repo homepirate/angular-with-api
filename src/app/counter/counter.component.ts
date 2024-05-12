@@ -3,13 +3,14 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Note } from '../reducers/counter.reducer';
-import { addNote, deleteNote, resetNotes } from '../counter.actions';
+import { addNote, resetNotes } from '../counter.actions';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { NoteComponent } from '../note/note.component';
 
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, NgIf, NgFor],
+  imports: [CommonModule, ReactiveFormsModule, NgIf, NgFor, NoteComponent],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss'
 })
@@ -39,9 +40,6 @@ notes$?: Observable<Note[]>;
       }
     }
   
-    deleteNote(title: string) {
-      this.store.dispatch(deleteNote({ title }));
-    }
     
     resetNotes() {
       this.store.dispatch(resetNotes());
