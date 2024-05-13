@@ -1,4 +1,16 @@
+
 .wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 20px;
+}
+
+app-header {
+    display: block;
+    background-color: #00FFFF;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-bottom: 10px;
 }
